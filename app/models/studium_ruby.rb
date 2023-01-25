@@ -1,0 +1,2 @@
+class StudiumRuby < ApplicationRecord
+end

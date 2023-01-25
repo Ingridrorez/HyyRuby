@@ -1,0 +1,35 @@
+<h1> Studium Rubies </h1>
+
+<table class="table table-striped table-bordered table-hover">
+  <thead class="thead-dark">
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Instagram</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+  <% @studium_rubies.each do |studium_ruby| %>
+  <tr>
+     <td><%= studium_ruby.First_name %></td>
+     <td><%= studium_ruby.Last_Name %></td>
+     <td><%= studium_ruby.Email %></td>
+     <td><%= studium_ruby.Phone %></td>
+     <td><%= studium_ruby.Instagram %></td>
+     <td><%= link_to 'Show', studium_ruby %></td>
+     <td><%= link_to 'Edit', edit_studium_ruby_path(studium_ruby) %></td>
+     <td><%= link_to 'Destroy', studium_ruby, method: :delete, data:{confirm: 'Are you sure?'} %></td>
+   </tr>
+  <% end %>
+ </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New CRuby', new_studium_ruby_path, class: "btn btn-dark" %>
+
+

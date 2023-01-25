@@ -1,0 +1,16 @@
+<div class="mt-4 p-5 bg-secondary bg-gradient text-white rounded">
+  <h1>
+    <%=@studium_ruby.First_name%>
+    <%=@studium_ruby.Last_Name %>
+  </h1>
+  <p>
+    <%= studium_ruby.Email %>
+    <%= studium_ruby.Phone %> |
+    <%= studium_ruby.Instagram %>
+  </p>
+  <br/>
+ <%= link_to "Edit this studium ruby", edit_studium_ruby_path(@studium_ruby), class: "btn btn-dark" %> 
+  <%= link_to "Back to studium rubies", studium_rubies_path, class: "btn btn-dark" %>
+  <br/><br/>
+  <%= button_to "Destroy this friend", @friend, method: :delete, class:"btn btn-danger" %>
+</div>
